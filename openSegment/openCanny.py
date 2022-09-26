@@ -11,7 +11,7 @@ suave = cv2.GaussianBlur(img, (7, 7), 0)
 canny1 = cv2.Canny(suave, 20, 120)
 canny2 = cv2.Canny(suave, 70, 200)
 
-resultado = np.vstack([np.hstack([img,suave ]), np.hstack([canny1, canny2])])
+resultado = np.vstack([np.hstack([img,suave]), np.hstack([canny1, canny2])])
 
 cv2.imshow("Detector de Bordas Canny", resultado)
 cv2.imwrite('canny.jpg', resultado)
