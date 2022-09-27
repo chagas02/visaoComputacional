@@ -1,11 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-def show_image(image, title='image', cmap_type= 'gray'):
-    plt.imshow(image, cmap=cmap_type)
-    plt.title(title)
-    plt.axis('off')
-    plt.show()
+from show_image import show_image
 
 foto = plt.imread('foto.jpg')
 foto_vertical = np.flipud(foto)
