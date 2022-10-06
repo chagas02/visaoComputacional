@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from atividade.sala.src.pdi_utils import show_image, load_chest_ray_x
 import cv2
+from skimage import exposure
 from skimage.color import rgb2gray
 
 
@@ -13,8 +14,8 @@ plt.hist(chest_gray.ravel(), bins=255)
 plt.show()
 
 # Use histogram equalization to improve the contrast
-xray_image_eq = cv2.equalizeHist(chest_gray)
-
+#xray_image_eq = cv2.equalizeHist(chest_gray)
+xray_image_eq = exposure.equalize_hist(chest_gray)
 
 # Show the resulting image
 show_image(xray_image_eq, 'Resulting image')
