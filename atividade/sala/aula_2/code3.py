@@ -10,15 +10,12 @@ gaussian_image = gaussian(building_image, sigma= 1, multichannel = True)
 show_image(building_image, "Original")
 show_image(gaussian_image, "Reduced sharpness Gaussian with sigma = 1")
 
-
-# Apply gaussian filter sigma = 5
+# Apply gaussian filter sigma = 5 e Show resulting image to compare
 gaussian_image5 = gaussian(building_image, sigma= 5, multichannel = True)
 
-# Show resulting image to compare
+
 show_image(gaussian_image5, "Reduced sharpness Gaussian with sigma = 5")
 
-# Apply filter sigma = 10
+# Apply filter sigma = 10 e  Show resulting image to compare
 gaussian_image10 = gaussian(building_image, sigma= 10, multichannel = True)
-
-# Show resulting image to compare
 show_image(gaussian_image10, "Reduced sharpness Gaussian with sigma = 10")
